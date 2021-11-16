@@ -52,4 +52,11 @@ xcode -> Open Developer Tool -> Simulator
 
 1. 백오피스에서 " Run on iOS simulator " 클릭
 
-<img src="./img/iOS-1.png" width="120" height="250">
+<div style="
+    width:100%;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;">
+  <img src="./img/iOS-1.png" width="120" height="250" alt="iOS simulator">
+</div>
