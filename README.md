@@ -1,4 +1,4 @@
-# react-native-learn
+# react native learn
 
 ## Expo-Cli 로 초기 설정하기
 
@@ -119,3 +119,18 @@ $ adb
 
 ![Android App](./img/android-1.png)
 
+## React Native 보완해야할 점
+
+### No or very little cross-platform styling of components
+
+- 직접 스타일링
+- third-party 라이브러리 사용
+
+### Only a basic set of pre-build components
+
+- 직접 컴포넌트 빌드
+- third-party 라이브러리 사용
+
+### Tools to create responsive designs but no responsiveness out of the box
+
+- OS와 디바이스 사이즈 보면서, 직접 반응형 디자인 생성
