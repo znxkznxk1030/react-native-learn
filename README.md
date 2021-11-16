@@ -52,4 +52,4 @@ xcode -> Open Developer Tool -> Simulator
 
 1. 백오피스에서 " Run on iOS simulator " 클릭
 
-![iOS App](./img/iOS-1.png)
+<img src="./img/iOS-1.png" width="120" height="250">
