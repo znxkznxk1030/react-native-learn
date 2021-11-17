@@ -119,7 +119,9 @@ $ adb
 
 ![Android App](./img/android-1.png)
 
-## React Native 보완해야할 점
+## React Native 단점
+
+### 반응형 디자인, 컴포넌트
 
 ### No or very little cross-platform styling of components
 
@@ -134,3 +136,39 @@ $ adb
 ### Tools to create responsive designs but no responsiveness out of the box
 
 - OS와 디바이스 사이즈 보면서, 직접 반응형 디자인 생성
+
+### 빠른 변화
+
+### New versions every month
+
+- 매달 새 버전이 나와 새/변경된 API 확인 필요
+
+### Breaking changes do happen
+
+- 새 버전에서 오류/버그 발생할수 있음
+
+### High Dependency on third-party packages that also change
+
+- third-party 라이브러리에 의존도가 높은데, 해당 라이브러리의 내용이 자주 변경된다.
+
+### Bugs / Workarounds required
+
+- 버그를 우회하기 위한 행위가 필요하다.
+
+## Core Component
+
+### There is no CSS
+
+- Inline Styles
+- StyleSheet Object ( Preferred )
+- ( Written in Javascript )
+
+> CSS Syntax를 가지고 있지만, 오직 "subset of properties" 와 feature들 만 지원된다.
+
+
+#### iOS keyboard 활성화
+
+```text
+- I/O > Keyboard > Toggle Software Keyboard
+- command + K
+```
