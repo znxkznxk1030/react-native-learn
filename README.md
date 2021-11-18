@@ -220,6 +220,11 @@ $ adb
 </FlatList>
 ```
 
+## Button
+
+- style을 직접 지정해줄 수 없다. (inline 이든 StyleSheet 이든 간에..)
+- 빈 View로 한번 감싸줘야한다.
+
 ### Touchable
 
 #### TouchableOpacity
@@ -231,3 +236,6 @@ $ adb
 #### TouchableHighlight
 
 #### TouchableWithoutFeedback
+
+### Modal
+
