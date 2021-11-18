@@ -231,5 +231,3 @@ $ adb
 #### TouchableHighlight
 
 #### TouchableWithoutFeedback
-
-
