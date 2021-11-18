@@ -207,7 +207,6 @@ $ adb
 
 ### FlatList
 
-- 사용하기 직관적 X
 - 화면이 짤리지 않음
 - 하지만 너무 많은 리스트에서도 성능저하를 막을수 있음 ( Recycling List )
 
@@ -220,3 +219,17 @@ $ adb
   ))}
 </FlatList>
 ```
+
+### Touchable
+
+#### TouchableOpacity
+
+```javascript
+<TouchableOpacity activeOpacity={0.8} />
+```
+
+#### TouchableHighlight
+
+#### TouchableWithoutFeedback
+
+

@@ -9,47 +9,33 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
+import GoalInput from './components/GoalInput';
+import GoalItem from './components/GoalItem';
 
 export default function App() {
-  const [enteredGoal, setEnteredGoal] = useState('');
   const [courseGoals, setCourseGoals] = useState([]);
 
-  const goalInputHandler = (enteredText) => {
-    setEnteredGoal(enteredText);
-  };
-
-  const addGoalHandler = () => {
-    console.log(enteredGoal);
-    setCourseGoals([...courseGoals, enteredGoal]);
-    // setEnteredGoal('');
+  const addGoalHandler = (goalTitle) => {
+    console.log(goalTitle);
+    setCourseGoals([
+      ...courseGoals,
+      { id: parseInt(Math.random() * 1000000).toString(), value: goalTitle },
+    ]);
   };
 
   return (
     <View style={styles.screen}>
-      <View style={styles.inputContainer}>
-        <TextInput
-          placeholder="Course Goal"
-          style={styles.input}
-          onChangeText={goalInputHandler}
-          value={enteredGoal}
-        />
-        <Button title="ADD" onPress={addGoalHandler} />
-      </View>
+      <GoalInput onAddGoal={addGoalHandler} />
       <FlatList
+        keyExtractor={(item) => item.id}
         data={courseGoals}
         renderItem={(itemData) => (
-          <View style={styles.listItem}>
-            <Text>{itemData.item}</Text>
-          </View>
+          <GoalItem
+            onDelete={() => console.log('delete')}
+            title={itemData.item.value}
+          />
         )}
       />
-      {/* <ScrollView>
-        {courseGoals.map((goal, index) => (
-          <View style={styles.listItem}>
-            <Text key={index}>{goal}</Text>
-          </View>
-        ))}
-      </ScrollView> */}
     </View>
   );
 }
@@ -57,23 +43,5 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: {
     padding: 50,
-  },
-  inputContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  input: {
-    width: '80%',
-    borderColor: 'black',
-    borderWidth: 1,
-    padding: 10,
-  },
-  listItem: {
-    padding: 10,
-    marginVertical: 5,
-    backgroundColor: '#ccc',
-    borderColor: 'black',
-    borderWidth: 1,
   },
 });
