@@ -65,7 +65,7 @@ xcode -> Open Developer Tool -> Simulator
 #### SDK Manager
 
 ```text
-Android Studio > Preference > Apperence & Behavior > System Settings > Android SDKs 
+Android Studio > Preference > Apperence & Behavior > System Settings > Android SDKs
 
 - SDK Platforms
 [v] Android 10.0 ( lastest )
@@ -107,7 +107,7 @@ $ adb
 
 - Environment ( 타겟 환경에 맞게 세팅 )
 
-``` text
+```text
 [v] Pixel 3a
 
 [v] Q ( API 29, Andorid 10.0 )
@@ -165,10 +165,58 @@ $ adb
 
 > CSS Syntax를 가지고 있지만, 오직 "subset of properties" 와 feature들 만 지원된다.
 
-
 #### iOS keyboard 활성화
 
 ```text
 - I/O > Keyboard > Toggle Software Keyboard
 - command + K
+```
+
+## List Components
+
+### View
+
+- 사용하기 직관적
+- 화면이 짤림
+
+```javascript
+<View>
+  {courseGoals.map((goal, index) => (
+    <View style={styles.listItem}>
+      <Text key={index}>{goal}</Text>
+    </View>
+  ))}
+</View>
+```
+
+### ScrollView
+
+- 사용하기 직관적
+- 화면이 짤리지 않음
+- 하지만 너무 많은 리스트에서는 성능저하가 발생
+
+```javascript
+<ScrollView>
+  {courseGoals.map((goal, index) => (
+    <View style={styles.listItem}>
+      <Text key={index}>{goal}</Text>
+    </View>
+  ))}
+</ScrollView>
+```
+
+### FlatList
+
+- 사용하기 직관적 X
+- 화면이 짤리지 않음
+- 하지만 너무 많은 리스트에서도 성능저하를 막을수 있음 ( Recycling List )
+
+```javascript
+<FlatList>
+  {courseGoals.map((goal, index) => (
+    <View style={styles.listItem}>
+      <Text key={index}>{goal}</Text>
+    </View>
+  ))}
+</FlatList>
 ```
