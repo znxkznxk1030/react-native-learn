@@ -240,3 +240,84 @@ $ adb
 ### Modal
 
 ## Debugging
+
+### Console.log
+
+- 가장 기본적인 방법
+
+```javascript
+console.log('Rerendering ' + JSON.stringify(courseGoals));
+```
+
+#### 현재 Device Info 출력하기
+
+#### expo-device ( expo app )
+
+> https://docs.expo.dev/versions/latest/sdk/device/#devicemodelid
+
+```javascript
+import * as Device from 'expo-device';
+
+console.log('Device totalMemory : ' + Device.totalMemory);
+console.log('Device modelName : ' + Device.modelName);
+```
+
+#### react-native-device-info ( expo app X )
+
+> https://www.npmjs.com/package/react-native-device-info
+
+```javascript
+import DeviceInfo from 'react-native-device-info';
+
+console.log('Device ID : ' + DeviceInfo.getUniqueID());
+```
+
+### Debug Remote JS
+
+- 브라우저 상에서 디버깅을 할수 있는 기능으로, source를 보면서 breakpoints를 걸 수 있다.
+
+![Debug Remote JS](./img/remote-js-debugger.png)
+
+#### AVD | Debug Remote JS
+
+> cmd + m 에서 Debug Remote JS
+
+#### IOS | Debug Remote JS
+
+> cmd + d 에서 Debug Remote JS
+
+### Reload
+
+#### AVD | Reload
+
+> cmd + m 에서 reload
+
+#### IOS | Reload
+
+> cmd + r 또는 cmd + d 에서 reload
+
+### React Native Debugger
+
+#### intall
+
+```bash
+brew install --cask react-native-debugger
+```
+
+#### download app
+
+> https://github.com/jhen0409/react-native-debugger/releases
+
+> react-native-debugger_0.12.1_universal.dmg
+
+#### port 지정하기
+
+> cmd + t
+
+#### 사용법
+
+1. 사용하고 있는 Chrome Remote Debug JS 있으면 끄기
+2. React Native Debugger 켜고 기다리기
+3. cmd + t로 Remote Debug JS 의 포트 입력 ( 나의경우는 19000, 크롬 디버거 띄울때의 포트 )
+
+![React Native Debugger](./img/react-native-debugger.png)

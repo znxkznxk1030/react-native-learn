@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "expo": "~43.0.2",
+    "expo-device": "~4.0.3",
     "expo-status-bar": "~1.1.0",
     "lodash": "^4.17.21",
     "react": "17.0.1",
