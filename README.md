@@ -324,3 +324,21 @@ brew install --cask react-native-debugger
 
 
 
+## Style
+
+### Shadow
+
+```javascript
+  inputContainer: {
+    // flex: 1,
+    width: '80%',
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 6,
+    shadowOpacity: 0.26,
+    elevation: 8, // for android
+    backgroundColor: 'white',
+    padding: 20,
+  },
+```
