@@ -307,7 +307,6 @@ brew install --cask react-native-debugger
 #### download app
 
 > https://github.com/jhen0409/react-native-debugger/releases
-
 > react-native-debugger_0.12.1_universal.dmg
 
 #### port 지정하기
@@ -322,7 +321,28 @@ brew install --cask react-native-debugger
 
 ![React Native Debugger](./img/react-native-debugger.png)
 
+## Syntax
 
+### props.children | 자식 DOM 가져오기
+
+```javascript
+const Card = (props) => {
+  return (
+    <View style={{ ...styles.card, ...props.style }}>{props.children}</View>
+  );
+};
+```
+
+```javascript
+<Card style={width: '100%'}>
+  <Text>Select a Number</Text>
+  <TextInput />
+  <View style={styles.buttonContainer}>
+    <Button title="YES" onPress={() => {}} />
+    <Button title="NO" onPress={() => {}} />
+  </View>
+</Card>
+```
 
 ## Style
 
