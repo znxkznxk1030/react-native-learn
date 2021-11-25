@@ -321,3 +321,6 @@ brew install --cask react-native-debugger
 3. cmd + t로 Remote Debug JS 의 포트 입력 ( 나의경우는 19000, 크롬 디버거 띄울때의 포트 )
 
 ![React Native Debugger](./img/react-native-debugger.png)
+
+
+
