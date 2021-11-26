@@ -384,3 +384,9 @@ const numberInputHandler = (inputText) => {
   ...
 </TouchableWithoutFeedback>
 ```
+
+### NaN 체크
+
+```javascript
+chosenNumber !== chosenNumber 
+```
