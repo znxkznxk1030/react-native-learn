@@ -362,3 +362,25 @@ const Card = (props) => {
     padding: 20,
   },
 ```
+
+## Tips
+
+### 숫자만 받기
+
+```javascript
+const numberInputHandler = (inputText) => {
+  setEnteredValue(inputText.replace(/[^0-9]/g, ''));
+};
+```
+
+### 다른 곳을 클릭하면 키보드 없애기
+
+```javascript
+<TouchableWithoutFeedback
+  onPress={() => {
+    Keyboard.dismiss();
+  }}
+>
+  ...
+</TouchableWithoutFeedback>
+```
