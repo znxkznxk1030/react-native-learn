@@ -323,6 +323,11 @@ brew install --cask react-native-debugger
 
 ## Syntax
 
+### Hook | useRef
+
+1. 레퍼런스 값은 영속적이다. => 렌더링하더라도 값을 유기하고 있음
+2. 레퍼런스 값을 업데이트 해도 리렌더링을 트리거 하지 않는다.
+
 ### props.children | 자식 DOM 가져오기
 
 ```javascript
