@@ -388,5 +388,15 @@ const numberInputHandler = (inputText) => {
 ### NaN 체크
 
 ```javascript
-chosenNumber !== chosenNumber 
+chosenNumber !== chosenNumber;
+
+isNaN(chosenNumber);
+```
+
+### Alert 띄우기
+
+```javascript
+Alert.alert('Invalid number!', 'Number has to be a number between 1 and 99.', [
+  { text: 'Okay', style: 'destructive', onPress: resetInputHandler },
+]);
 ```
