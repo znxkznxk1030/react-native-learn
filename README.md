@@ -368,6 +368,74 @@ const Card = (props) => {
   },
 ```
 
+## Custom Font 적용하기
+
+### 1. font 파일(.ttf) 다운로드
+
+![폰트 다운로드](./img/font-1.png)
+
+### 2. install expo-font
+
+- 프로젝트 디렉토리에서
+
+```bash
+expo install expo-font
+```
+
+### 3. import expo-font
+
+```javascript
+import * as Font from 'expo-font';
+```
+
+### 4. fetch font
+
+```javascript
+const fetchFont = () => {
+  // returns Promise Object
+  return Font.loadAsync({
+    'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
+    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+  });
+};
+```
+
+### 5. font가 로딩 될 때까지 App 로딩 막기
+
+```javascript
+const [dataLoaded, setDataLoaded] = useState(false);
+
+if (!dataLoaded) {
+  return (
+    <AppLoading
+      startAsync={fetchFonts}
+      onFinish={() => {
+        setDataLoaded(true);
+      }}
+      onError={(err) => {
+        console.error(err);
+      }}
+    />
+  );
+}
+```
+
+### 6. 적용
+
+- fontFamily
+
+```javascript
+  title: {
+    fontSize: 20,
+    marginVertical: 10,
+    fontFamily: 'open-sans-bold',
+  },
+```
+
+- font 적용 된 모습
+
+![font 적용](./img/font-2.png)
+
 ## Tips
 
 ### 숫자만 받기
@@ -414,4 +482,20 @@ let content = <StartGameScreen onStartGame={startGameHandler} />;
 if (userNumber) {
   content = <GameScreen />;
 }
+```
+
+### App Loading
+
+```javascript
+import { AppLoading } from 'expo';
+```
+
+안된다면
+
+```bash
+expo install expo-app-loading
+```
+
+```javascript
+import AppLoading from 'expo-app-loading';
 ```
