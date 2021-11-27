@@ -400,3 +400,13 @@ Alert.alert('Invalid number!', 'Number has to be a number between 1 and 99.', [
   { text: 'Okay', style: 'destructive', onPress: resetInputHandler },
 ]);
 ```
+
+### 화면 스위칭 하기
+
+```javascript
+let content = <StartGameScreen onStartGame={startGameHandler} />;
+
+if (userNumber) {
+  content = <GameScreen />;
+}
+```
