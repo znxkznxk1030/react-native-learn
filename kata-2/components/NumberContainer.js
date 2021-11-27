@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import Colors from '../contants/colors';
+import Colors from '../constants/colors';
 
 const NumberContainer = (props) => {
   return (

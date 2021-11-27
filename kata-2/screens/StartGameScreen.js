@@ -17,9 +17,7 @@ import Card from '../components/Card';
 import Input from '../components/Input';
 import NumberContainer from '../components/NumberContainer';
 
-import DefaultStyles from '../contants/default-styles';
-
-import Colors from '../contants/colors';
+import Colors from '../constants/colors.js';
 
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -144,6 +142,7 @@ const styles = StyleSheet.create({
     width: 100,
   },
   summaryContainer: {
+    width: '50%',
     marginTop: 20,
     alignItems: 'center',
   },
