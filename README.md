@@ -368,6 +368,53 @@ const Card = (props) => {
   },
 ```
 
+### Cascade 적용하기
+
+- 상위 부모에서 적용된 스타일이 자식 컴포넌트들에게도 적용된 폭포(Cascade) 방식은 React-Native에서는 Default가 아니다.
+
+#### 1. Atomic 한 컴포넌트에 적용해서 사용하기
+
+- ex) default로 제공해준 Text 컴포넌트를 이용해 BodyText로 랩핑해서 사용
+
+```javascript
+import React from 'react';
+import { Text, StyleSheet } from 'react-native';
+
+const BodyText = (props) => {
+  return (
+    <Text {...props} style={{ ...styles.body, ...props.style }}>
+      {props.children}
+    </Text>
+  );
+};
+
+const styles = StyleSheet.create({
+  body: {
+    fontFamily: 'open-sans',
+  },
+});
+
+export default BodyText;
+```
+
+#### 2. default StyleSheet Object 만들어서 사용하기
+
+```javascript
+// constant/default-styles.js
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
+  bodyText: {
+    fontFamily: 'open-sans',
+    color: 'red',
+  },
+  title: {
+    fontFamily: 'open-sans-bold',
+    fontSize: 18,
+  },
+});
+```
+
 ## Custom Font 적용하기
 
 ### 1. font 파일(.ttf) 다운로드
@@ -379,6 +426,8 @@ const Card = (props) => {
 - 프로젝트 디렉토리에서
 
 ```bash
+# npm 을 사용 할 수도 있지만 expo관련 라이브러리는 expo로 install하는게 안전하다
+# expo 를 이용해도 package.json의 dependencies에는 자동으로 추가 된다.
 expo install expo-font
 ```
 

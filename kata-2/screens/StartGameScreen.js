@@ -10,9 +10,14 @@ import {
   Alert,
 } from 'react-native';
 
+import TitleText from '../components/TitleText';
+import BodyText from '../components/BodyText';
+
 import Card from '../components/Card';
 import Input from '../components/Input';
 import NumberContainer from '../components/NumberContainer';
+
+import DefaultStyles from '../contants/default-styles';
 
 import Colors from '../contants/colors';
 
@@ -50,8 +55,6 @@ const StartGameScreen = (props) => {
     setConfirmed(true);
   };
 
-  const cancelInputHandler = () => {};
-
   let confirmedOutput;
 
   if (confirmed) {
@@ -76,9 +79,9 @@ const StartGameScreen = (props) => {
       }}
     >
       <View style={styles.screen}>
-        <Text style={styles.title}>The Game Screen</Text>
+        <TitleText style={styles.title}>The Game Screen</TitleText>
         <Card style={styles.inputContainer}>
-          <Text>Select a Number</Text>
+          <BodyText>Select a Number</BodyText>
           <Input
             style={styles.input}
             blurOnSubmit
