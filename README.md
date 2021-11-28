@@ -220,7 +220,7 @@ $ adb
 </FlatList>
 ```
 
-## Button
+## Button Component
 
 - style을 직접 지정해줄 수 없다. (inline 이든 StyleSheet 이든 간에..)
 - 빈 View로 한번 감싸줘야한다.
@@ -238,6 +238,24 @@ $ adb
 #### TouchableWithoutFeedback
 
 ### Modal
+
+## Image Component
+
+```javascript
+<View style={styles.imageContainer}>
+  <Image
+    fadeDuration={1000}
+    // source={require('../assets/success.png')}
+    source={{
+      uri: 'https://s3.amazonaws.com/www.explorersweb.com/wp-content/uploads/2021/05/23233000/Summit-Everest-MingmaG.jpg',
+    }}
+    style={styles.image}
+    resizeMode="cover"
+  />
+</View>
+```
+
+![이미지 컴포넌트](./img/image-1.png)
 
 ## Debugging
 
