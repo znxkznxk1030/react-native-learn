@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Button, StyleSheet, Alert } from 'react-native';
 import NumberContainer from '../components/NumberContainer';
 import Card from '../components/Card';
+import MainButton from '../components/MainButton';
 
 import DefaultStyles from '../constants/default-styles';
 

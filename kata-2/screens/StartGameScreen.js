@@ -12,6 +12,7 @@ import {
 
 import TitleText from '../components/TitleText';
 import BodyText from '../components/BodyText';
+import MainButton from '../components/MainButton';
 
 import Card from '../components/Card';
 import Input from '../components/Input';
@@ -60,12 +61,12 @@ const StartGameScreen = (props) => {
       <Card style={styles.summaryContainer}>
         <Text>You Selected</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button
+        <MainButton
           title="START GAME"
           onPress={() => {
             props.onStartGame(selectedNumber);
           }}
-        ></Button>
+        ></MainButton>
       </Card>
     );
   }
@@ -142,7 +143,7 @@ const styles = StyleSheet.create({
     width: 100,
   },
   summaryContainer: {
-    width: '50%',
+    width: '60%',
     marginTop: 20,
     alignItems: 'center',
   },
