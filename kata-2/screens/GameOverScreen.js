@@ -29,7 +29,7 @@ const GameOverScreen = (props) => {
           <Text style={styles.highlight}>{userNumber}</Text>
         </BodyText>
       </View>
-      <MainButton title="NEW GAME" onPress={onRestart} />
+      <MainButton onPress={onRestart}>NEW GAME</MainButton>
     </View>
   );
 };
