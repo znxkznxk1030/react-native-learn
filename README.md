@@ -566,3 +566,39 @@ expo install expo-app-loading
 ```javascript
 import AppLoading from 'expo-app-loading';
 ```
+
+### Icons ( @expo/vector-icons )
+
+- icons 목록
+  <https://icons.expo.fyi/>
+
+- @expo/vector-icons Documentation
+  <https://docs.expo.dev/guides/icons/>
+
+#### 1. Import the icon family
+
+```javascript
+import { Ionicons } from '@expo/vector-icons';
+```
+
+#### 2. Render the component
+
+```javascript
+<Ionicons name="md-add" size={24} color="black" />
+```
+
+### 쓸만한 UI Libraries
+
+#### react native paper
+
+<https://callstack.github.io/react-native-paper/>
+
+#### native base
+
+<https://github.com/GeekyAnts/NativeBase>
+
+#### react-native-elements
+
+<https://github.com/react-native-elements/react-native-elements>
+
+
