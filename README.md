@@ -604,3 +604,9 @@ import { Ionicons } from '@expo/vector-icons';
 ### ScrollView | style vs contentContainerStyle
 
 <https://stackoverflow.com/questions/52892304/style-vs-contentcontainerstyle-in-scrollview>
+
+### flex vs flex-grow
+
+<https://stackoverflow.com/questions/35395691/understanding-the-difference-between-the-flex-and-flex-grow-properties>
+
+
