@@ -601,4 +601,6 @@ import { Ionicons } from '@expo/vector-icons';
 
 <https://github.com/react-native-elements/react-native-elements>
 
+### ScrollView | style vs contentContainerStyle
 
+<https://stackoverflow.com/questions/52892304/style-vs-contentcontainerstyle-in-scrollview>
