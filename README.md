@@ -314,6 +314,18 @@ console.log('Device ID : ' + DeviceInfo.getUniqueID());
 
 > cmd + r 또는 cmd + d 에서 reload
 
+### Resize
+
+#### AVD | Resize
+
+> cmd + ▲ / ▼
+
+#### AVD | Rmove Frame 
+
+- [ ] Enable Device Frame
+
+![remove frame](./img/remove-frame-avd.png)
+
 ### React Native Debugger
 
 #### intall
