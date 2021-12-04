@@ -628,3 +628,27 @@ import { Ionicons } from '@expo/vector-icons';
 ```javascript
 width: Dimensions.get('window').width / 3;
 ```
+
+- Dimentions를 사용하게 되면 앱시작 초기에만 설정이 되므로
+- 화면이 rotate되게 되면 설정이 깨진다.
+
+```javascript
+const [buttonWidth, setButtonWidth] = useState(
+  Dimensions.get('window').width / 4
+);
+
+const updateLayout = () => {
+  setButtonWidth(Dimensions.get('window').width / 4);
+};
+
+Dimensions.addEventListener('change', updateLayout);
+```
+
+### Orientation
+
+> 화면 회전시 자동으로 눞혀지게 만드는 설정
+
+```json
+// app.json
+"orientation": "default", // portrait - 세로, landscape - 가로
+```
