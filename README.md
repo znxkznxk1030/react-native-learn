@@ -320,7 +320,7 @@ console.log('Device ID : ' + DeviceInfo.getUniqueID());
 
 > cmd + ▲ / ▼
 
-#### AVD | Rmove Frame 
+#### AVD | Rmove Frame
 
 - [ ] Enable Device Frame
 
@@ -621,4 +621,10 @@ import { Ionicons } from '@expo/vector-icons';
 
 <https://stackoverflow.com/questions/35395691/understanding-the-difference-between-the-flex-and-flex-grow-properties>
 
+### Dimentions
 
+- window의 width, height를 알 수 있음.
+
+```javascript
+width: Dimensions.get('window').width / 3;
+```
