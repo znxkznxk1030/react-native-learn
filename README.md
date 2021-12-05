@@ -652,3 +652,20 @@ Dimensions.addEventListener('change', updateLayout);
 // app.json
 "orientation": "default", // portrait - 세로, landscape - 가로
 ```
+
+- expo에서 화면 돌아가게 만들기
+
+```javascript
+import * as ScreenOrientation from 'expo-screen-orientation';
+
+const GameScreen = (props) => {
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT);
+  ...
+}
+```
+
+### Platform API
+
+```javascript
+backgroundColor: Platform.OS === 'android' ? Colors.primary : 'white',
+```
