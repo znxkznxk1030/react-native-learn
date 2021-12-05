@@ -515,6 +515,8 @@ if (!dataLoaded) {
 
 ![font 적용](./img/font-2.png)
 
+## Navigation
+
 ## Tips
 
 ### 숫자만 받기
