@@ -669,3 +669,16 @@ const GameScreen = (props) => {
 ```javascript
 backgroundColor: Platform.OS === 'android' ? Colors.primary : 'white',
 ```
+
+### SafeAreaView
+
+> 자동으로 padding을 생성해줘소 안 눌리는 버튼이 없게끔 도와주는 View
+
+```javascript
+return (
+  <SafeAreaView style={styles.container}>
+    <Header title="Guess a Number" />
+    {content}
+  </SafeAreaView>
+);
+```
