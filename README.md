@@ -517,6 +517,40 @@ if (!dataLoaded) {
 
 ## Navigation
 
+### install
+
+> npm install --save react-navigation
+
+```bash
+npm install --save react-navigation
+
+expo install react-native-gesture-handler react-native-reanimated
+```
+
+#### StackNavigator
+
+> npm install --save react-navigation-stack
+
+```javascript
+import { createStackNavigator } from 'react-navigation-stack';
+```
+
+#### TabsNavigator
+
+> npm install --save react-navigation-tabs
+
+```javascript
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+```
+
+#### DrawerNavigator
+
+> npm install --save react-navigation-drawer
+
+```javascript
+import { createDrawerNavigator } from 'react-navigation-drawer';
+```
+
 ## Tips
 
 ### 숫자만 받기
