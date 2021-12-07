@@ -587,7 +587,34 @@ const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
 
 ### navigationOptions
 
+#### Navigation 에서 선언하기
+
 ```javascript
+const MealsNavigator = createStackNavigator(
+  {
+    CategoryMeals: {
+      screen: CategoryMealsScreen,
+      navigationOptions: {
+        headerTintColor: Colors.primaryColor,
+      },
+    },
+    MealDetail: MealDetailScreen,
+  },
+  {
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor:
+          Platform.OS === 'android' ? Colors.primaryColor : 'white',
+      },
+    },
+  }
+);
+```
+
+#### 화면에서 선언하기
+
+```javascript
+// Literal Object
 CategoriesScreen.navigationOptions = {
   headerTitle: 'Meal Categories',
   headerStyle: {
@@ -595,9 +622,28 @@ CategoriesScreen.navigationOptions = {
   },
   headerTintColor: 'white',
 };
+
+// Functional with navigation Data
+CategoryMealsScreen.navigationOptions = (navigationData) => {
+  const catId = navigationData.navigation.getParam('categoryId');
+
+  const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
+
+  return {
+    headerTitle: selectedCategory.title,
+  };
+};
 ```
 
 ![navigation options](./img/nav-header-options.png)
+
+#### 부드러운 트랜지션
+
+```javascript
+import { enableScreens } from 'react-native-screens';
+
+enableScreens()
+```
 
 ## Tips
 
