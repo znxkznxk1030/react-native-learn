@@ -220,6 +220,19 @@ $ adb
 </FlatList>
 ```
 
+#### FlatList | Grid 만들기
+
+```javascript
+<FlatList
+  keyExtractor={(item, index) => {
+    return item.id;
+  }}
+  data={CATEGORIES}
+  renderItem={renderGridItem}
+  numColumns={2}
+/>
+```
+
 ## Button Component
 
 - style을 직접 지정해줄 수 없다. (inline 이든 StyleSheet 이든 간에..)
@@ -550,6 +563,20 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 ```javascript
 import { createDrawerNavigator } from 'react-navigation-drawer';
 ```
+
+### navigationOptions
+
+```javascript
+CategoriesScreen.navigationOptions = {
+  headerTitle: 'Meal Categories',
+  headerStyle: {
+    backgroundColor: Colors.primaryColor,
+  },
+  headerTintColor: 'white',
+};
+```
+
+![navigation options](./img/nav-header-options.png)
 
 ## Tips
 
