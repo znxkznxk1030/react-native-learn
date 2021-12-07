@@ -564,6 +564,27 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 ```
 
+### params 넘기기
+
+```javascript
+<TouchableOpacity
+  onPress={() => {
+    props.navigation.navigate({
+      routeName: 'CategoryMeals',
+      params: {
+        categoryId: itemData.item.id,
+      },
+    });
+  }}
+>
+```
+
+```javascript
+const catId = props.navigation.getParam('categoryId');
+
+const selectedCategory = CATEGORIES.find((cat) => cat.id === catId);
+```
+
 ### navigationOptions
 
 ```javascript
