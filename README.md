@@ -642,8 +642,58 @@ CategoryMealsScreen.navigationOptions = (navigationData) => {
 ```javascript
 import { enableScreens } from 'react-native-screens';
 
-enableScreens()
+enableScreens();
 ```
+
+## Header Buttons
+
+### Header Buttons | install
+
+```bash
+npm install --save react-navigation-header-buttons@6
+```
+
+### CustomHeaderButton
+
+> 헤더버튼에 아이콘으로 넣고 싶을때 사용
+
+```javascript
+const CustomHeaderButton = (props) => {
+  return (
+    <HeaderButton
+      {...props}
+      IconComponent={Ionicons}
+      iconSize={23}
+      color={Platform.OS === 'android' ? 'white' : Colors.primaryColor}
+    />
+  );
+};
+```
+
+### CustomHeaderButton | 적용
+
+```javascript
+MealDetailScreen.navigationOptions = (navigationData) => {
+  const mealId = navigationData.navigation.getParam('mealId');
+  const selectedMeal = MEALS.find((meal) => meal.id === mealId);
+  return {
+    headerTitle: selectedMeal.title,
+    headerRight: () => (
+      <HeaderButtons HeaderButtonComponent={CustomHeaderButton}>
+        <Item
+          title="Favorite"
+          iconName="ios-star"
+          onPress={() => {
+            console.log('Mark a Favorite');
+          }}
+        />
+      </HeaderButtons>
+    ),
+  };
+};
+```
+
+![header button](./img/header-button.png)
 
 ## Tips
 
