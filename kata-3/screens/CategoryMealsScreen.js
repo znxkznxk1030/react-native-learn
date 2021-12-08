@@ -7,7 +7,16 @@ import { CATEGORIES, MEALS } from '../data/dummy-data';
 
 const CategoryMealsScreen = (props) => {
   const renderMealItem = (itemData) => {
-    return <MealItem title={itemData.item.title} onSelectMeal={() => {}} />;
+    return (
+      <MealItem
+        title={itemData.item.title}
+        image={itemData.item.imageUrl}
+        duration={itemData.item.duration}
+        complexity={itemData.item.complexity.toUpperCase()}
+        affordability={itemData.item.affordability.toUpperCase()}
+        onSelectMeal={() => {}}
+      />
+    );
   };
 
   const catId = props.navigation.getParam('categoryId');
